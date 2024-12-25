@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 5px black;
+  }
+}
+
+.navbar {
+  background: linear-gradient(90deg, rgba(10, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+  @apply text-white text-lg font-bold px-3 py-1 border-t-2 border-transparent transition-all duration-500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  @apply text-cyan-400 border-b-2 border-cyan-400;
+}
