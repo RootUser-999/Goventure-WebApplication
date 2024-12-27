@@ -1,19 +1,13 @@
-import { useState, FormEvent } from 'react';
-
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
+import React, { useState } from 'react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.name && formData.email && formData.message) {
       alert('Message sent successfully! Thank you for contacting us.');

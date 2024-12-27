@@ -1,0 +1,18 @@
+/* App.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .component {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    width: 80%;
+  }

@@ -1,19 +1,17 @@
-import Layout from './components/layout/Layout';
-import Home from './components/sections/Home';
-import About from './components/sections/About';
-import Services from './components/sections/Services';
-import Trips from './components/sections/Trips';
-import Contact from './components/sections/Contact';
+import './App.css';
+import Home from './components/Home';
+import About from './components/About';
+import Navbar from './components/navigation/Navbar';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <Layout>
+    <>
+      <Navbar/>
       <Home />
       <About />
-      <Services />
-      <Trips />
       <Contact />
-    </Layout>
+      </>
   );
 }
 

@@ -1,11 +1,6 @@
-interface TeamMember {
-  image: string;
-  name: string;
-  role: string;
-  description: string;
-}
+import React from 'react';
 
-const teamMembers: TeamMember[] = [
+const teamMembers = [
   {
     image: '/images/hero1.png',
     name: 'Shahzeb',
@@ -22,11 +17,11 @@ const teamMembers: TeamMember[] = [
     image: '/images/hero3.jpeg',
     name: 'Innara Arif',
     role: 'Tour Coordinator',
-    description: 'Adeel ensures the tours are well-organized, helping travelers enjoy their experience from start to finish.',
+    description: 'Innara Arif ensures the tours are well-organized, helping travelers enjoy their experience from start to finish.',
   },
 ];
 
-export default function About() {
+const About = () => {
   return (
     <>
       <section id="about" className="bg-black bg-opacity-90 text-cyan-400 py-12 px-4">
@@ -76,4 +71,6 @@ export default function About() {
       </section>
     </>
   );
-}
+};
+
+export default About;

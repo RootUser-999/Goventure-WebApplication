@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const images = [
   '/images/back_img/back1.jpg',
@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -26,7 +26,7 @@ export default function Home() {
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
       <div className="mt-64">
-      <h1 className="text-5xl font-bold mb-5 text-shadow">
+        <h1 className="text-5xl font-bold mb-5 text-shadow">
           PLAN YOUR{' '}
           <span className="text-[rgb(0,255,179)] text-shadow">CUSTOMIZE</span>{' '}
           TOUR
@@ -36,10 +36,16 @@ export default function Home() {
           <span className="text-cyan-400">GOVENTURE</span>
         </p>
         <div className="flex justify-center gap-3">
-          <a href="#" className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-400 transition-all duration-300 shadow-lg">
+          <a 
+            href="#" 
+            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-400 transition-all duration-300 shadow-lg"
+          >
             Book Now
           </a>
-          <a href="#trips" className="border-2 border-white text-white px-6 py-2 rounded-lg hover:bg-white  hover:text-black transition-all duration-300 shadow-lg">
+          <a 
+            href="#trips" 
+            className="border-2 border-white text-white px-6 py-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300 shadow-lg"
+          >
             View Plans
           </a>
         </div>
