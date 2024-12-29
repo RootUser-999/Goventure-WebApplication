@@ -1,10 +1,11 @@
+import React from 'react';
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-gray-900 text-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Info */}
@@ -13,7 +14,7 @@ export default function Footer() {
             <div className="space-y-2">
               <p className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-cyan-400" />
-                123 Adventure St, Pakistan
+                Goventure St, Pakistan
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-cyan-400" />
@@ -21,7 +22,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-cyan-400" />
-                info@goventure.com
+                shahzabaman971@gmail.com
               </p>
             </div>
           </div>
