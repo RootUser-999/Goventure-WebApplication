@@ -7,21 +7,21 @@ const tripsData = [
     title: 'Mountain Adventure',
     description: 'Explore the stunning mountain landscapes and enjoy adventurous hikes.',
     price: '$299',
-    image: '/images/mountain.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBeB1dbY3DjdN-VWvIorifD-6JhFzYdLOGOw&s',
   },
   {
     id: 2,
     title: 'Beach Paradise',
     description: 'Relax on the pristine beaches with crystal-clear waters.',
     price: '$399',
-    image: '/images/beach.jpg',
+    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/d8/e8/14/kund-malir-beach-03008094313.jpg?w=500&h=400&s=1',
   },
   {
     id: 3,
     title: 'City Exploration',
     description: 'Discover the hidden gems of a bustling city with rich culture.',
     price: '$199',
-    image: '/images/city.jpg',
+    image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/0*X0xnfeOcblPfYCrD',
   },
 ];
 

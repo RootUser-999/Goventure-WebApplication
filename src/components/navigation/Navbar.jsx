@@ -1,29 +1,23 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 // Navigation items
 const navItems = [
-  { id: 'a1', label: 'Home', href: '#home' },
-  { id: 'a2', label: 'About', href: '#about' },
-  { id: 'a3', label: 'Services', href: '#services' },
-  { id: 'a4', label: 'Trips', href: '/trips' },
-  { id: 'a5', label: 'Contact', href: '#contact' },
+  { id: 'a1', label: 'Home', to: '/' },
+  { id: 'a2', label: 'About', to: '/about' },
+  { id: 'a3', label: 'Services', to: '/services' },
+  { id: 'a4', label: 'Trips', to: '/trips' },
+  { id: 'a5', label: 'Contact', to: '/contact' },
 ];
-
-
 
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState('a1');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleNavItemClick = (e, id) => {
-    e.preventDefault();
+  const handleNavItemClick = (id) => {
     setActiveItem(id);
     setIsMenuOpen(false); // Close the menu on item click
-    const href = e.currentTarget.getAttribute('href');
-    if (href) {
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   // Close the mobile menu on window resize if the width is >=768px
@@ -43,24 +37,24 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="text-white">
+            <Link to="/" className="text-white">
               <img
                 src="/images/logo.png"
                 alt="Logo"
                 className="h-12 transition-all duration-300"
                 style={{ filter: 'invert(1)' }}
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.id}
-                  href={item.href}
-                  onClick={(e) => handleNavItemClick(e, item.id)}
+                  to={item.to}
+                  onClick={() => handleNavItemClick(item.id)}
                   className={`${
                     activeItem === item.id
                       ? 'text-cyan-400 border-b-2 border-cyan-400'
@@ -68,7 +62,7 @@ export default function Navbar() {
                   } px-3 py-2 text-lg font-medium transition-all duration-300`}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -94,10 +88,10 @@ export default function Navbar() {
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.id}
-              href={item.href}
-              onClick={(e) => handleNavItemClick(e, item.id)}
+              to={item.to}
+              onClick={() => handleNavItemClick(item.id)}
               className={`${
                 activeItem === item.id
                   ? 'text-cyan-400 border-l-4 border-cyan-400 bg-black/50'
@@ -105,7 +99,7 @@ export default function Navbar() {
               } block px-3 py-2 text-base font-medium transition-all duration-300`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
